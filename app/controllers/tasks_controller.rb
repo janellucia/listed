@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
     before_action :authenticate_user!
-    before_action :set_task, only:[:edit, :update, :show, :destroy]
+    before_action :set_task, only:[:edit, :update, :show, :destroy, :change]
    
     def index 
         # @tasks = Task.all
@@ -41,9 +41,14 @@ class TasksController < ApplicationController
     end
 
     def destroy
-        
         @task.destroy
         flash[:notice] = "task was successfully deleted"
+        redirect_to tasks_path
+    end
+
+    def change
+        @task.update_attributes(state: params[:state])
+        flash[:notice] = "task status was successfully updated"
         redirect_to tasks_path
     end
 
