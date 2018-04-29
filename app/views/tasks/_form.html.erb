@@ -9,6 +9,9 @@
 
 <%= simple_form_for @task do |f| %>
     <%= f.input :content, :error => false %>
+
+    <%= f.input :state %>
+
     <%= f.button :submit, class: 'btn btn-primary' %>
 <% end %>
 <p></p>
