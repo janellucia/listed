@@ -24,7 +24,6 @@ class TasksController < ApplicationController
         else
             render 'new'
         end
-
     end
 
     def update
@@ -37,7 +36,6 @@ class TasksController < ApplicationController
     end
 
     def show
-       
     end
 
     def destroy
