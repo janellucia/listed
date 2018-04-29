@@ -1,5 +1,5 @@
 <% if @task.errors.any? %>
-<h3>Oooops somehting went wrong:</h3>
+<h3>Oooops something went wrong:</h3>
 <ul>
     <% @task.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -7,12 +7,10 @@
     </ul>
 <% end %>
 
-<%= simple_form_for @task do |f| %>
-    <%= f.input :content, :error => false %>
+<%= simple_form_for @task, html: {class: 'form-signin'} do |f| %>
+    <%= f.input :content, label: false, placeholder: 'Content', autofocus:true, :error => false %>
 
-    <%= f.input :state %>
-
-    <%= f.button :submit, class: 'btn btn-primary' %>
+    <%= f.button :submit, class: 'btn btn-primary btn-block' %>
 <% end %>
 <p></p>
-<p><%= link_to 'All tasks', tasks_path %> |  <%= link_to "Back", :back  %></p>
+<p class='text-center'><%= link_to 'All tasks', tasks_path %></p>
