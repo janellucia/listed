@@ -11,5 +11,7 @@
 
 <%= simple_form_for @task do |f| %>
     <%= f.input :content, :error => false %>
-    <%= f.button :submit %>
+    <%= f.button :submit, class: 'btn btn-primary' %>
 <% end %>
+
+<%= link_to 'All tasks', tasks_path %>
