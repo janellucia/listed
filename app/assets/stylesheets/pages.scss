@@ -3,28 +3,32 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
     margin-top: 70px;
-    background: #ffc69e;
     font-family: 'Arimo', sans-serif;
-    color: #004797;
+    color: black;
     letter-spacing: 0.5px;
+    background: #f9e5cc !important;
+}
+
+h1,
+h2 {
+    font-weight: bold;
 }
 
 .navbar-default,
 .jumbotron {
-    background: #f9e5cc !important;
+    background: lighten(#f9e5cc, 5%) !important;
     border: 1px solid #f9e5cc;
     a {
-        color: #004797 !important;
+        color: black !important;
     }
     img {
         display: inline;
     }
     .navbar-toggle {
-        background: #f9e5cc !important;
         border: 1px solid transparent !important;
-        color: #004797;
+        color: black;
         .icon-bar {
-            background-color: #004797 !important;
+            background-color: black !important;
         }
     }
 }
@@ -42,7 +46,8 @@ body {
     border: none !important;
 }
 
-.panel-info {
+.panel-info,
+.panel-footer {
     border: none !important;
 }
 
@@ -55,14 +60,19 @@ body {
     }
 }
 
+.panel-body,
+.panel-footer {
+    background: lighten(#f9e5cc, 5%) !important;
+}
+
 .btn {
-    background: darken(#92b7db, 10%);
-    border: 1px solid darken(#92b7db, 10%);
+    background: #92b7db;
+    border: 1px solid #92b7db;
     letter-spacing: 1px;
 }
 
 .btn:hover,
 .btn:focus {
-    background: darken(#92b7db, 20%);
-    border: 1px solid darken(#92b7db, 20%);
+    background: darken(#92b7db, 10%);
+    border: 1px solid darken(#92b7db, 10%);
 }
