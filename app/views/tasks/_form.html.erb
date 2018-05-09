@@ -1,10 +1,10 @@
 <% if @task.errors.any? %>
-<h3>Oooops something went wrong:</h3>
-<ul>
+<h3 class="text-center">Oooops something went wrong:</h3>
+
     <% @task.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <p class="text-center"><%= msg %></p>
     <% end %>
-    </ul>
+
 <% end %>
 
 <%= simple_form_for @task, html: {class: 'form-signin'} do |f| %>

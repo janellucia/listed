@@ -1,7 +1,7 @@
 
-<div class="panel panel-info">
+<div class="panel panel-default">
     <div class="panel-heading">
-        <%= link_to 'View', task_path(task)%> | 
+        <%= link_to 'View', task_path(task)%> <span>|</span>
         <%= link_to 'Edit', edit_task_path(task) %>
 
         <%= link_to 'X', task_path(task), method: :delete, data: {confirm: 'Are you sure you want to Delete?'}, class: 'pull-right' %>
@@ -12,12 +12,12 @@
     <div class="panel-footer">
         <div class="btn-group btn-group-justified">
             <% if task.state == 'doing' %>
-                <%= link_to '<i class="fa fa-arrow-left"></i>'.html_safe, change_task_path(task, state: "to_do"), method: :put, class: 'btn btn-info btn-block' %>
-                <%= link_to '<i class="fa fa-arrow-right"></i>'.html_safe, change_task_path(task, state: "done"), method: :put, class: 'btn btn-info btn-block' %>
+                <%= link_to '<i class="fa fa-arrow-left"></i>'.html_safe, change_task_path(task, state: "to_do"), method: :put, class: 'btn btn-primary btn-block' %>
+                <%= link_to '<i class="fa fa-arrow-right"></i>'.html_safe, change_task_path(task, state: "done"), method: :put, class: 'btn btn-primary btn-block' %>
             <% elsif task.state == 'done' %>
-                <%= link_to '<i class="fa fa-arrow-left"></i>'.html_safe, change_task_path(task, state: "doing"), method: :put, class: 'btn btn-info btn-block' %>
+                <%= link_to '<i class="fa fa-arrow-left"></i>'.html_safe, change_task_path(task, state: "doing"), method: :put, class: 'btn btn-primary btn-block' %>
             <% else %>
-                <%= link_to '<i class="fa fa-arrow-right"></i>'.html_safe, change_task_path(task, state: "doing"), method: :put, class: 'btn btn-info btn-block' %>
+                <%= link_to '<i class="fa fa-arrow-right"></i>'.html_safe, change_task_path(task, state: "doing"), method: :put, class: 'btn btn-primary btn-block' %>
             <% end %>
         </div>
     </div>

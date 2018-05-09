@@ -2,11 +2,67 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
-    // background-image: url('./images/backgriund.jpeg');
-    background: url('https://unsplash.com/photos/Jy6luiLBsrk');
+    margin-top: 70px;
+    background: #ffc69e;
+    font-family: 'Arimo', sans-serif;
+    color: #004797;
+    letter-spacing: 0.5px;
+}
+
+.navbar-default,
+.jumbotron {
+    background: #f9e5cc !important;
+    border: 1px solid #f9e5cc;
+    a {
+        color: #004797 !important;
+    }
+    img {
+        display: inline;
+    }
+    .navbar-toggle {
+        background: #f9e5cc !important;
+        border: 1px solid transparent !important;
+        color: #004797;
+        .icon-bar {
+            background-color: #004797 !important;
+        }
+    }
+}
+
+.jumbotron {
+    margin-top: 50px;
 }
 
 .flash-message {
     font-style: italic;
     text-transform: capitalize;
+}
+
+.panel {
+    border: none !important;
+}
+
+.panel-info {
+    border: none !important;
+}
+
+.panel-heading {
+    background: #ff6951 !important;
+    span,
+    p,
+    a {
+        color: white;
+    }
+}
+
+.btn {
+    background: darken(#92b7db, 10%);
+    border: 1px solid darken(#92b7db, 10%);
+    letter-spacing: 1px;
+}
+
+.btn:hover,
+.btn:focus {
+    background: darken(#92b7db, 20%);
+    border: 1px solid darken(#92b7db, 20%);
 }
