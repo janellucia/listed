@@ -1,3 +1,12 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    // background-image: url('./images/backgriund.jpeg');
+    background: url('https://unsplash.com/photos/Jy6luiLBsrk');
+}
+
+.flash-message {
+    font-style: italic;
+    text-transform: capitalize;
+}

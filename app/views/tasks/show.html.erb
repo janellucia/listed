@@ -1,8 +1,17 @@
-<h1>Showing Task</h1>
+<h1 class="text-center">Showing Task #<%= @task.id %> </h1>
 
-<strong>Content: </strong> <%= @task.content %>
-<strong>State: </strong> <%= @task.state %>
-
-
-<p><%= link_to 'All Tasks', tasks_path  %> |
-<%= link_to 'Edit Task', edit_task_path(@task) %></p>
+<div class="form-signin">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <strong>State: </strong> <%= @task.state %>
+            <%= link_to 'X', task_path(@task), method: :delete, data: {confirm: 'Are you sure you want to Delete?'}, class: 'pull-right' %>
+        </div>    
+        <div class="panel-body"><%= @task.content %></div>
+        <div class="panel-footer">
+            <div class="btn-group btn-group-justified">
+                <%= link_to 'All Tasks', tasks_path, class: 'btn btn-info btn-block'  %>
+                <%= link_to 'Edit Task', edit_task_path(@task), class: 'btn btn-info btn-block' %>
+            </div>
+        </div>
+    </div>
+</div>
